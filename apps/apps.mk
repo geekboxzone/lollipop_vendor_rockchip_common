@@ -70,7 +70,8 @@ PRODUCT_PACKAGES += \
     ITVLauncher	\
     RKGameControlSettingV1.0.1	\
     RkMusic	\
-    Settings2
+    Settings2 \
+	DualScreenApk
   ifeq ($(strip $(BOARD_USE_LOW_MEM256)), true)
         PRODUCT_PACKAGES += \
               SimpleLauncher
