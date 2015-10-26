@@ -12,6 +12,9 @@ LOCAL_CERTIFICATE := PRESIGNED
 #LOCAL_OVERRIDES_PACKAGES := 
 ifneq ($(DISABLE_MODEM),true)
 LOCAL_SRC_FILES := $(LOCAL_MODULE).apk
+ifeq ($(TARGET_PROJECT),sofia3gr_car)
+LOCAL_SRC_FILES := $(LOCAL_MODULE)_car.apk
+endif
 else
 LOCAL_SRC_FILES := $(LOCAL_MODULE)_wifionly.apk
 endif
