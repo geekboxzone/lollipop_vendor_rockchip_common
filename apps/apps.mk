@@ -18,6 +18,12 @@ PRODUCT_PACKAGES += \
     projectX
 endif
 
+ifeq ($(strip $(TARGET_BOARD_PLATFORM)), rk3368)
+PRODUCT_PACKAGES += \
+    WinStartService \
+    projectX
+endif
+
 ifeq ($(strip $(TARGET_BOARD_PLATFORM)), rk312x)
 PRODUCT_PACKAGES += \
     RkVideoPlayer
