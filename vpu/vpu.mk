@@ -61,3 +61,7 @@ else
     endif
 endif
 
+ifeq ($(TARGET_PROJECT),sofia3gr_car)
+PRODUCT_PACKAGES += \
+     libdrivingrecoder
+endif
