@@ -61,7 +61,7 @@ else
     endif
 endif
 
-ifeq ($(TARGET_PROJECT),sofia3gr_car)
+ifeq ($(PRODUCT_BUILD_MODULE),car)
 PRODUCT_PACKAGES += \
      libdrivingrecoder
 endif
