@@ -11,6 +11,11 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_MODULE_SUFFIX := $(TARGET_SHLIB_SUFFIX)
+LOCAL_REQUIRED_MODULES := \
+        auto_pair_devlist.conf \
+        bt_did.conf \
+        bt_stack.conf \
+        libbt-vendor
 LOCAL_MULTILIB := both
 include $(BUILD_PREBUILT)
 
