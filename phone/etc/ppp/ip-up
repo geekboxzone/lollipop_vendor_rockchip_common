@@ -16,6 +16,15 @@ esac
 
 # Use interface name if linkname is not available
 NAME=${LINKNAME:-"$1"}
+#Use openDNS to replace bogus DNS by xxh
+
+if [ "$DNS1" -o "$DNS2" ];then
+if [ "${DNS1:0:8}" = "10.11.12" -o "${DNS2:0:8}" = "10.11.12" ];then
+DNS1="8.8.8.8"
+DNS2="8.8.8.8"
+fi
+fi
+#end by xxh
 
 /system/bin/setprop "net.$NAME.dns1" "$DNS1"
 /system/bin/setprop "net.$NAME.dns2" "$DNS2" 
