@@ -13,6 +13,11 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/common/nand/modules/arm/drmboot.ko:root/drmboot.ko
 endif
 
+ifeq ($(strip $(TARGET_BOARD_PLATFORM)), rk3288)
+PRODUCT_COPY_FILES += \
+    vendor/rockchip/common/nand/modules/arm/rk3288/rk30xxnand_ko.ko.3.10.0:root/rk30xxnand_ko.ko.3.10.0 \
+    vendor/rockchip/common/nand/modules/arm/drmboot.ko:root/drmboot.ko
+endif
 ifeq ($(strip $(TARGET_BOARD_PLATFORM)), rk3188)
 PRODUCT_COPY_FILES += \
     vendor/rockchip/common/nand/modules/arm/rk3188/rk30xxnand_ko.ko:root/rk30xxnand_ko.ko \
