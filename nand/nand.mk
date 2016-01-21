@@ -7,6 +7,13 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/common/nand/modules/arm64/rk30xxnand_ko.ko.3.10.0:recovery/root/rk30xxnand_ko.ko.3.10.0
 endif
 
+ifeq ($(strip $(TARGET_BOARD_PLATFORM)), rk3366)
+PRODUCT_COPY_FILES += \
+    vendor/rockchip/common/nand/modules/arm64/drmboot.ko:root/drmboot.ko \
+    vendor/rockchip/common/nand/modules/arm64/rk30xxnand_ko.ko.3.10.0:root/rk30xxnand_ko.ko.3.10.0 \
+    vendor/rockchip/common/nand/modules/arm64/rk30xxnand_ko.ko.3.10.0:recovery/root/rk30xxnand_ko.ko.3.10.0
+endif
+
 ifeq ($(strip $(TARGET_BOARD_PLATFORM)), rk3036)
 PRODUCT_COPY_FILES += \
     vendor/rockchip/common/nand/modules/arm/rk3036/rk30xxnand_ko.ko.3.10.0:root/rk30xxnand_ko.ko.3.10.0 \
