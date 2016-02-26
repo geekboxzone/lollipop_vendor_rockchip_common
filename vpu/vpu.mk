@@ -16,8 +16,7 @@ PRODUCT_PACKAGES += \
     librkswscale \
     libjesancache \
     libapedec\
-    librk_audio \
-    wfd
+    librk_audio
 else
 ifeq ($(strip $(USE_INTEL_MDP)), true)
 PRODUCT_PACKAGES += \
