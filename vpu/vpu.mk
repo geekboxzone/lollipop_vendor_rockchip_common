@@ -15,7 +15,7 @@ PRODUCT_PACKAGES += \
     librkwmapro \
     librkswscale \
     libjesancache \
-    libapedec\
+    libapedec \
     librk_audio
 else
 ifeq ($(strip $(USE_INTEL_MDP)), true)
@@ -40,7 +40,8 @@ ifneq ($(filter rk%, $(TARGET_BOARD_PLATFORM)), )
 PRODUCT_PACKAGES += \
     librkffplayer \
     libffmpeg \
-	iso
+    libcsiconv \
+    iso
 endif
 
 PRODUCT_COPY_FILES += \
